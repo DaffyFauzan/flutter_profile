@@ -68,17 +68,17 @@ class HelloWorld extends StatelessWidget {
                         style: const TextStyle(fontSize: 42, color: Colors.white),
                       ),
                       Text(
-                        'A student at $school',
+                        'Student of $school',
                         textAlign: TextAlign.center,
                         style: const TextStyle(fontSize: 15, color: Colors.white),
                       ),
                       Text(
-                        'Experience $position',
+                        'Experienced as $position',
                         textAlign: TextAlign.center,
                         style: const TextStyle(fontSize: 15, color: Colors.white),
                       ),
                       Text(
-                        'Description: $description',
+                        description,
                         textAlign: TextAlign.center,
                         style: const TextStyle(fontSize: 15, color: Colors.white),
                       ),
