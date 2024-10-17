@@ -1,11 +1,26 @@
 import 'package:flutter/material.dart';
 import 'page2.dart';
+import 'input.dart';
 
 void main() {
-  runApp(MaterialApp(home: HelloWorld()));
+  runApp(const MaterialApp(home: LoginPage()));
 }
 
 class HelloWorld extends StatelessWidget {
+  final String name;
+  final String school;
+  final String position;
+  final String description;
+
+  // Constructor to receive the data from the login page
+  const HelloWorld({
+    super.key,
+    required this.name,
+    required this.school,
+    required this.position,
+    required this.description,
+  });
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,15 +62,25 @@ class HelloWorld extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 10),
-                      const Text(
-                        "Daffi Fauzan",
+                      Text(
+                        name,
                         textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 42, color: Colors.white),
+                        style: const TextStyle(fontSize: 42, color: Colors.white),
                       ),
-                      const Text(
-                        "Students of Wikrama Vocational High School",
+                      Text(
+                        'A student at $school',
                         textAlign: TextAlign.center,
-                        style: TextStyle(fontSize: 15, color: Colors.white),
+                        style: const TextStyle(fontSize: 15, color: Colors.white),
+                      ),
+                      Text(
+                        'Experience $position',
+                        textAlign: TextAlign.center,
+                        style: const TextStyle(fontSize: 15, color: Colors.white),
+                      ),
+                      Text(
+                        'Description: $description',
+                        textAlign: TextAlign.center,
+                        style: const TextStyle(fontSize: 15, color: Colors.white),
                       ),
                       ElevatedButton(
                         onPressed: () {
@@ -65,7 +90,7 @@ class HelloWorld extends StatelessWidget {
                           );
                         },
                         child: const Text('See More'),
-                      ),
+                      )
                     ],
                   ),
                 ),
